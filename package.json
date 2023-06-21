@@ -1,8 +1,8 @@
 {
-  "name": "backend",
+  "name": "nestjs-template",
   "version": "1.0.0",
-  "description": "Tastyhouse main backend",
-  "author": "danieluhm2004 <daniel@tastyhou.se>",
+  "description": "Nestjs Template",
+  "author": "danieluhm2004 <iam@dan.al>",
   "private": true,
   "license": "MIT",
   "scripts": {

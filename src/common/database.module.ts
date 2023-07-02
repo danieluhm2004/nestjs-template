@@ -1,4 +1,7 @@
-import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
+import {
+  TypeOrmModule,
+  TypeOrmModuleOptions,
+} from '@danieluhm2004/nestjs-tools';
 
 import { Module } from '@nestjs/common';
 import _ from 'lodash';

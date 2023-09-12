@@ -5,6 +5,7 @@ import {
 } from '@danieluhm2004/nestjs-tools';
 
 import { AppModule } from './app.module';
+import { EVM } from './common/evm';
 import { Opcode } from './common/opcode';
 
 async function bootstrap() {
@@ -13,11 +14,9 @@ async function bootstrap() {
   if (process.env.IS_SCHEDULER === 'true') {
     Logger.log('스케줄러 모드로 실행되었습니다.');
     await app.init();
-    return;
+  } else {
+    await app.listen(EVM.WEB_PORT);
   }
-
-  const port = parseInt(process.env.WEB_PORT) || 3000;
-  await app.listen(port);
 }
 
 bootstrap();

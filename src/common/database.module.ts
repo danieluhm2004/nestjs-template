@@ -4,11 +4,11 @@ import {
 } from '@danieluhm2004/nestjs-tools';
 
 import { Module } from '@nestjs/common';
-import _ from 'lodash';
+import { EVM } from './evm';
 
 export const options: TypeOrmModuleOptions = {
   type: 'mysql',
-  url: _.get(process.env, 'DATABASE_URL'),
+  url: EVM.DATABASE_URL,
   keepConnectionAlive: true,
   synchronize: false,
   entities: [],
